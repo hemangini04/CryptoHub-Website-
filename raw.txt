@@ -1,0 +1,141 @@
+@media (max-width:600px) {
+
+            .logo {
+                font-size: 3vw;
+                margin-right: 80%;
+
+            }
+
+
+            .logo::first-letter {
+                font-size: 4vw;
+
+            }
+
+            nav ul {
+                display: none;
+            }
+
+
+            .nav-menu-btn i {
+                display: block;
+                color: var(--secondary-color);
+            }
+
+            nav .btn {
+                display: none;
+            }
+        }
+
+
+
+        @media(max-width:600px) {
+            .sidebar {
+                width: 50%;
+            }
+
+        }
+
+
+
+
+
+       <nav>
+            <p class="logo">CryptoHub</p>
+            <ul>
+                <li><a href="#">Account</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="display_profile_info.php">My Profile</a>
+                            <li><a href="change_profile.php">Edit Profile</a></li>
+                            <li><a href="logout.php">Log out</a></li>
+
+                        </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Algorithm</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li class="hover-me"><a href="classical_info.php">Classical</a><i class="ri-arrow-drop-right-line"></i>
+                                <div class="inner_sub-menu">
+                                    <ul>
+                                        <li><a href="caesar_info.php">Ceasar</a></li>
+                                        <li><a href="columnar_transsposition_info.php">Columnar Transposition</a></li>
+                                        <li><a href="playfair_info.php">Playfair</a></li>
+                                        <li><a href="railfence_info.php">Railfence</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="modern_info.php">Modern</a><i class="ri-arrow-drop-right-line"></i>
+                                <div class="inner_sub-menu">
+                                    <ul>
+                                        <li class="inner_hover-me"><a href="Symmetric_info.php">1.Symmetric</a><i class="ri-arrow-drop-right-line"></i>
+                                            <div class="most_inner_sub-menu">
+                                                <ul>
+                                                    <li><a href="DES_info.php">DES</a></li>
+                                                    <li><a href="AES_info.php">AES</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="inner_hover-me"><a href="Asymmetric_info.php">2.Asymmetric</a><i class="ri-arrow-drop-right-line"></i>
+                                            <div class="most_inner_sub-menu">
+                                                <ul>
+                                                    <li><a href="RSA_info.php">RSA</a></li>
+
+
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="hash_info.html">Hash Function</a><i class="ri-arrow-drop-right-line"></i>
+                                <div class="inner_sub-menu">
+                                    <ul>
+                                        <li><a href="SHA1_info.php">SHA1</a></li>
+                                        <li><a href="SHA256_info.php">SHA256</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li><a href="Contact.php">Contact</a></li>
+                <li id="icon"><a><i class="ri-contrast-2-fill"></a></i></li>
+            </ul>
+            <a href="index.php" class="btn">Home</a>
+            <h4><a href="logout.php" class="btn"><i class="ri-logout-box-r-line"></i></a></h4>
+
+            <h4 onclick=showSidebar() class="nav-menu-btn"><i class="ri-menu-2-fill"></i></h4>
+
+            <ul class="sidebar">
+                <li onclick=closeSidebar() id="close-btn"><i class="ri-close-large-fill"></i></li>
+                <li><a href="index.php"><i class="ri-home-4-fill"></i> Home</a></li>
+                <li><a href="#"><i class="ri-account-circle-fill"></i> My Account</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="display_profile_info.php">My Profile</a>
+                            <li><a href="change_profile.php">Edit Profile</a></li>
+                            <li><a href="logout.php">Log out</a></li>
+
+                        </ul>
+                </li>
+                <li><a href="about.html"><i class="ri-team-fill"></i> About Us</a></li>
+                <li><a href="#"><i class="ri-book-open-fill"></i> Algorithm</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="classical_info.php">Classical</a></li>
+                            <li><a href="modern_info.php">Modern</a></li>
+                            <li><a href="hash_info.php">Hash Function</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li><a href="Contact.php"><i class="ri-phone-fill"></i> Contact Us</a></li>
+                <li><a href="logout.php"><i class="ri-logout-box-r-line"></i> Logout</a></li>
+                <li id="icon"><a><i class="ri-contrast-2-fill"></i></a></li>
+            </ul>
+        </nav>

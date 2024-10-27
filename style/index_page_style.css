@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    /*overflow: hidden;*/
+    background-color: var(--primary-color);
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+.hero{
+    height: 100vh;
+    width: 100vw;
+    background:var( --primary-color);
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    
+    border-bottom:var(--secondary-color);
+    
+}
+
+
+.logo{
+    font-size: 2.2vw;
+    font-weight: bold;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+
+
+
+.logo::first-letter{
+    font-size: 3vw;
+    border: 2px solid var(--secondary-color);
+    border-right: transparent;
+    padding-left: 5px;
+    color: var(--hover-color);
+}
+
+
+nav ul
+{
+    display: flex;
+    margin-left: 20%;
+}
+
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 10px 20px;
+}
+
+
+
+nav ul li a{
+    position: relative;
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+
+
+nav ul li a:hover{
+    color: var(--hover-color);
+}
+
+
+
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--hover-color);
+    transition: 0.3s;
+}
+
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.sub-menu
+{
+    display: none;
+
+}
+
+
+.sub-menu ul li a
+{
+    color: var(--secondary-color);
+}
+
+
+nav ul li:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color:var(--drop-down-color);
+    margin-top: 15px; /* Adjust this value as needed */
+    margin-left:-15px; /* Adjust this value as needed */
+    z-index: 999; /* Ensure it's above other elements */
+}
+
+
+nav ul li:hover .sub-menu ul
+{
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+}
+
+
+nav ul li:hover .sub-menu ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted gray;
+    background-color: transparent;
+    border-radius: 0;
+    text-align: left;
+
+}
+
+
+nav ul li:hover .sub-menu ul li:last-child
+{
+    border-bottom: none;
+}
+
+
+
+
+nav .btn{
+    color:var( --primary-color);
+    font-size: 16px;
+    text-transform: uppercase;
+    background: var(--hover-color);
+    padding: 10px 30px;
+    border-radius: 500px;
+    display: flex;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out;
+    border: 2px solid var(--hover-color);
+    margin-left: 20%;
+}
+
+
+.btn:hover{
+    background: transparent;
+    color:var(--secondary-color);
+}
+
+
+.sidebar
+{
+    position: fixed;
+    top:0;
+    right:0;
+    height:100%;
+    width:40%;
+    z-index: 999;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar ul
+{
+    width: 100%;
+}
+
+
+.sidebar li i
+{
+    color:var(--secondary-color);
+}
+
+#icon
+{
+    width:30px;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: bolder;
+    color:var(--secondary-color);
+}
+
+
+#icon i:hover{
+    color: var(--hover-color);
+}
+
+#icon i::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--hover-color);
+    transition: 0.3s;
+}
+
+
+#icon i:hover::after{
+    width: 100%;
+}
+
+:root{
+    --primary-color:#fff;
+    --secondary-color:#212121;
+    --hover-color:saddlebrown;
+    --drop-down-color:#ECECEC;
+    
+}
+
+
+.dark_theme
+{
+    --primary-color:#000000;
+    --secondary-color:#fff;
+    --hover-color:#00B0A5;
+    --drop-down-color:rgba(255, 255, 255, 0.2);
+
+   
+}
+
+
+
+
+.detail{
+    position: absolute;
+    top: 35%;
+    left: 6%;
+    
+    
+}
+
+
+.detail h1{
+    font-size: 70px;
+    font-weight: 700;
+    margin-right:50%;
+}
+
+
+.detail h1 span{
+    color: var(--hover-color);
+}
+
+
+.detail p{
+    color:var(--secondary-color);
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+
+.detail .btn{
+    color: var( --primary-color);
+    font-size: 16px;
+    text-transform: uppercase;
+    background: var(--hover-color);
+    padding: 10px 30px;
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out;
+    border: 2px solid var(--hover-color);
+   /* margin-left: 30%;*/
+}
+
+.detail .btn:hover{
+    background: transparent;
+    color: var(--secondary-color);
+}
+
+.image{
+    position: absolute;
+    width: 45%;
+    height: 50%;
+    top: 145px;
+    right: 80px;
+   
+   
+   
+   
+}
+
+
+.image img{
+    display: block;
+    width: 100%;
+    height:fit-content;
+    object-fit:fill;
+    margin-right: 30%;
+    
+
+    
+    
+   
+}
+
+
+.nav-menu-btn i{
+    font-size: larger;
+    font-weight: bolder;
+    display: none;
+    
+    
+}
+
+
+
+
+
+
+@media (max-width:600px){
+    nav
+    {
+        background-color:var( --primary-color);
+        
+       
+
+    }
+    .logo{
+        font-size: 3vw;
+        
+        
+    }
+
+        
+    
+    .logo::first-letter{
+        font-size: 4vw;
+        
+       
+    }
+
+    nav ul
+    {
+       display: none;
+       margin-right:20%;
+    }
+    
+
+    .nav-menu-btn i
+    {
+        display:block;
+        color:var(--secondary-color);
+        
+    }
+    nav .btn
+    {
+        display: none;
+        
+    }
+
+    .detail
+    {
+        margin-top:20%;
+    }
+
+    .detail h1
+    {
+        font-size: 5vw;
+        margin-top: 20%;
+        flex-direction: column;
+        
+    }
+
+    .detail p
+    {
+        font-size: 3vw;
+        flex-direction: column;
+    }
+
+    .detail .btn
+    {
+        font-size: 3vw;
+        margin-left:20%;
+    }
+
+    .image
+    {
+        flex-direction: column;
+        width:80%;
+        margin-left: 30%;
+       
+
+        
+    }
+
+    .detail #element
+    {
+        margin-top:30%;
+        
+        
+    }
+
+   
+   
+}
+
+@media(max-width:400px)
+{
+    .sidebar{
+        width:100%;
+    }
+
+    
+ 
+   
+
+    
+}
